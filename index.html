@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Course Demo</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>CSS Course Demo</h1>
+      <p>
+        Focus: colors, text formatting, grid, margin, padding, borders, outline,
+        width/height, overflow, position (static, relative, absolute, sticky,
+        fixed), display, font-weight, font-size (px only).
+      </p>
+    </header>
+
+    <main>
+      <!-- Colors -->
+      <section id="colors" class="section">
+        <h2>Colors</h2>
+        <div class="swatches">
+          <div class="swatch swatch-hex">HEX</div>
+          <div class="swatch swatch-rgb">RGB</div>
+          <div class="swatch swatch-hsl">HSL</div>
+          <div class="swatch swatch-named">named</div>
+        </div>
+      </section>
+
+      <!-- Text Formatting -->
+      <section id="text-format" class="section">
+        <h2>Text Formatting</h2>
+        <p class="text-sample align-left">
+          Left aligned text with
+          <span class="decoration-underline">underline</span>.
+        </p>
+        <p class="text-sample align-center upper">
+          Center aligned & UPPERCASE.
+        </p>
+        <p class="text-sample align-right capitalize">
+          Right aligned & Capitalized words.
+        </p>
+        <p class="text-sample spacing">
+          Custom letter-spacing and line-height example.
+        </p>
+        <p class="text-sample weight-300">Font weight 300</p>
+        <p class="text-sample weight-600">Font weight 600</p>
+        <p class="text-sample weight-900">Font weight 900</p>
+        <p class="text-sample px-12">font-size: 12px</p>
+        <p class="text-sample px-16">font-size: 16px</p>
+        <p class="text-sample px-24">font-size: 24px</p>
+      </section>
+
+      <!-- Margin, Padding, Borders, Outline -->
+      <section id="spacing-borders" class="section">
+        <h2>Margin, Padding, Borders, Outline</h2>
+        <div class="box spacing-demo">
+          Margin, padding, border, and outline demo
+        </div>
+      </section>
+
+      <!-- Width, Height, Overflow -->
+      <section id="sizing-overflow" class="section">
+        <h2>Width, Height, Overflow</h2>
+        <div class="overflow-row">
+          <div class="overflow-box auto">
+            <strong>overflow: auto</strong>
+            <p>
+              Content Content Content Content Content Content Content Content
+              Content Content Content Content Content Content Content Content
+            </p>
+          </div>
+          <div class="overflow-box hidden">
+            <strong>overflow: hidden</strong>
+            <p>
+              Content Content Content Content Content Content Content Content
+              Content Content Content Content Content Content Content Content
+            </p>
+          </div>
+          <div class="overflow-box scroll">
+            <strong>overflow: scroll</strong>
+            <p>
+              Content Content Content Content Content Content Content Content
+              Content Content Content Content Content Content Content Content
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Display -->
+      <section id="display" class="section">
+        <h2>Display</h2>
+        <div class="display-demo">
+          <span class="d-inline">Inline</span>
+          <span class="d-inline">elements flow</span>
+          <div class="d-block">Block element takes full width.</div>
+          <div class="d-inline-block">Inline-block</div>
+          <div class="d-inline-block">Inline-block 2</div>
+          <div class="d-none">You should not see me (display:none)</div>
+        </div>
+      </section>
+
+      <!-- Positioning (static, relative, absolute, sticky, fixed) -->
+      <section id="positioning" class="section position-section">
+        <h2>Positioning</h2>
+        <div class="pos-area">
+          <div class="pos-box static">static</div>
+          <div class="pos-box relative">relative (offset)</div>
+          <div class="pos-box absolute">absolute (inside pos-area)</div>
+          <div class="pos-box sticky">
+            sticky (sticks to top when scrolling)
+          </div>
+        </div>
+        <p class="scroll-filler">Scroll to see sticky in action...</p>
+      </section>
+    </main>
+
+    <!-- Fixed element -->
+    <div class="fixed-note">fixed note (bottom-right)</div>
+
+    <footer class="site-footer">
+      <p>End of demo — no flex and no box-shadow used.</p>
+    </footer>
+  </body>
+</html>
