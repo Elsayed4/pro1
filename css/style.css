@@ -1,0 +1,190 @@
+/*
+  CSS Course 
+  ------------------------------------------------------------------------
+  This file explains the requested CSS topics with inline comments and examples.
+
+
+
+  
+  Covered:
+  1) Colors (HEX, RGB, named colors)
+  2) Text formatting (alignment, decoration, transform, spacing)
+  3) Margin & Padding
+  4) Borders vs Outline
+  5) Width & Height
+  6) Overflow
+  7) Position: static, relative, absolute, sticky, fixed
+  8) Display: inline, block, inline-block, none
+  9) Font weight & font-size (px only)
+
+  Not included by request: flex, grid, hsl colors, box-shadow.
+*/
+
+/* ---------- Base / Page Styles ---------- */
+ body { /* Basic reset */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Using a named color for text and HEX for background */
+  color: #222222; /* dark gray text */
+  background-color: #f7f7f7; /* light gray background */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.site-header, .site-footer {
+  background-color: rgb(240, 248, 255); /* RGB color */
+  border-bottom: 1px solid #ccc; /* border */
+  padding: 16px; /* padding */
+}
+
+.site-footer { border-top: 1px solid #ccc; border-bottom: none; }
+
+.section {
+  padding: 16px; /* padding around content */
+  margin: 16px;  /* space outside the section */
+  background-color: #ffffff; /* HEX color */
+  border: 1px solid #e5e7eb; /* light border */
+}
+
+h1 { font-size: 28px; /* font-size in px only */ }
+h2 { font-size: 22px; /* font-size in px only */ }
+p  { font-size: 16px; /* font-size in px only */ }
+
+/* ---------- 1) Colors ---------- */
+.swatches { /* simple inline-block demo instead of grid */
+  margin-top: 10px;
+}
+
+.swatch {
+  height: 60px; /* fixed height in px */
+  width: 120px;
+  display: inline-block; /* side by side without grid */
+  text-align: center;
+  line-height: 60px;
+  color: white; /* text color */
+  font-weight: 600; /* font-weight */
+  margin-right: 10px;
+}
+
+.swatch-hex { background-color: #1e40af; }        /* HEX */
+.swatch-rgb { background-color: rgb(34, 197, 94); } /* RGB */
+.swatch-named { background-color: teal; }           /* Named */
+
+/* ---------- 2) Text Formatting ---------- */
+.text-sample { margin: 6px 0; }
+.align-left   { text-align: left;   }
+.align-center { text-align: center; }
+.align-right  { text-align: right;  }
+
+.decoration-underline { text-decoration: underline; }
+.upper { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+.spacing { letter-spacing: 1px; }
+
+/* font-weight examples */
+.weight-300 { font-weight: 300; }
+.weight-600 { font-weight: 600; }
+.weight-900 { font-weight: 900; }
+
+/* font-size in px only */
+.px-12 { font-size: 12px; }
+.px-16 { font-size: 16px; }
+.px-24 { font-size: 24px; }
+
+/* ---------- 3) Margin & Padding ---------- */
+/* The .spacing-demo element in HTML shows these visually */
+.box.spacing-demo {
+  background: #fff7ed; /* pale orange */
+  border: 2px solid #fb923c; /* orange border */
+  /* Padding adds space inside the border */
+  padding: 16px; 
+  /* Margin adds space outside the border */
+  margin: 20px 0; 
+  /* Outline sits outside the border and does not change layout */
+  outline: 3px dashed #f59e0b;
+  outline-offset: 6px; /* gap between border and outline */
+}
+
+/* ---------- 4) Borders vs Outline ---------- */
+/* Explained above: border participates in layout; outline does not. */
+
+/* ---------- 5) Width & Height ---------- */
+.box-fixed-size {
+  width: 200px;  /* width in px */
+  height: 120px; /* height in px */
+}
+
+/* ---------- 6) Overflow ---------- */
+.overflow-row { margin-top: 10px; }
+
+.overflow-box {
+  border: 1px solid #d1d5db;
+  height: 100px; /* constrained height to trigger overflow */
+  width: 200px;
+  padding: 8px;
+  background: #fafafa;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 12px;
+}
+
+.overflow-box.auto   { overflow: auto; }
+.overflow-box.hidden { overflow: hidden; }
+.overflow-box.scroll { overflow: scroll; }
+
+/* ---------- 7) Position ---------- */
+.position-section { height: 500px; /* extra space to allow scrolling */ }
+
+.pos-area {
+  position: relative; /* establishes containing block for absolute children */
+  border: 1px solid #93c5fd;
+  background: #eff6ff;
+  height: 240px;
+  padding: 8px;
+}
+
+.pos-box {
+  display: inline-block; /* display demo */
+  padding: 8px 10px;
+  border: 1px solid #60a5fa;
+  background: #dbeafe;
+  margin: 6px;
+}
+
+.pos-box.static { position: static; }
+.pos-box.relative {
+  position: relative;
+  top: 8px;
+  left: 6px;
+}
+.pos-box.absolute {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.pos-box.sticky {
+  position: sticky; 
+  top: 0;
+  background: #fde68a;
+  border-color: #f59e0b;
+}
+
+.fixed-note {
+  position: fixed; 
+  bottom: 16px; 
+  right: 16px; 
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  padding: 10px 12px;
+  font-size: 14px; /* px only */
+}
+
+/* ---------- 8) Display ---------- */
+.d-inline { display: inline; }
+.d-block { display: block; margin: 6px 0; padding: 6px; background: #e0f2fe; }
+d-inline-block { display: inline-block; margin: 4px; padding: 4px 8px; background: #e2e8f0; }
+.d-none { display: none; }
+
+/* ---------- 9) Font weight & size (px) ---------- */
